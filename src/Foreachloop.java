@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Foreachloop {
 
@@ -27,7 +28,24 @@ public class Foreachloop {
             System.out.print(fruit + " "); // print apple banana cherry
         }
 
+        // create a HashMap, Wrapper type when defining the data type of key and value of the HashMap
+        HashMap<String, Double> ItemWithPrice = new HashMap<>();
+        // add key-value pair using put() method
+        ItemWithPrice.put("Chips", 1.2);
+        ItemWithPrice.put("Tomaten", 2.1);
+        // iterate through the HashMap using foreach
+        for (String itemkey : ItemWithPrice.keySet()) { //means: for each item among the items(key!) in ItemWithPrice HashMap
+            System.out.println("Item: " + itemkey + " price: " + ItemWithPrice.get(itemkey) + "."); // get() method need parameter key to retrieve the value, the value here is price of the item
+        }
+        // HashMap has methods: .put(key, value) to define the content of map
+        // .keySet() method to get a Set, which has the keys of the HashMap
+        // .remove(key) to remove the key-value pair
+        // .clear() then the HashMap is empty
+        // .size() get the length of HashMap
+        // .containsKey(key) to see if the key is in the map, return boolean value
+        // .replace(key, new value) to replace the value of a key
+        // .values() returns a Collection containing all the values (without their keys) in the HashMap
+        }
 
 
     }
-}
